@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Platform, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Platform, Text, TextInput, TouchableOpacity, View ,KeyboardAvoidingView} from "react-native";
 import style from "./style";
 import image from "../../images/group.png";
 import Svg from "../../images/user.png";

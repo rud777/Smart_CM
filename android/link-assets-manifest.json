@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/Size.js",
+      "sha1": "7423a388a75a1efa12dbd675f0316dbcd815f306"
+    },
+    {
+      "path": "src/assets/svg/SvgAcountMe.js",
+      "sha1": "a6158b8d0aaa054ffb869fda495c273f21dda8fc"
+    },
+    {
+      "path": "src/assets/svg/SvgHome.js",
+      "sha1": "4f03ff80a4a38f47d64347eee101ede54d69625c"
+    },
+    {
+      "path": "src/assets/svg/SvgIce.js",
+      "sha1": "6cf6cc45cbbbb55b86c8fcad3e7f475eb56834bb"
+    },
+    {
+      "path": "src/assets/svg/SvgNotification.js",
+      "sha1": "0542ed8404fc31e77bb331eaef97035bf78768a4"
+    },
+    {
+      "path": "src/assets/svg/SvgPassword.js",
+      "sha1": "437ea39b26e21af37253232c9da629ee8170c3ad"
+    },
+    {
+      "path": "src/assets/svg/SvgPlus.js",
+      "sha1": "9e273f33243f38cafba12893c9190c3c62d29892"
+    },
+    {
+      "path": "src/assets/svg/SvgStar.js",
+      "sha1": "2a45ba34ffc22348172f05a7f314bb1b24fe9606"
+    },
+    {
+      "path": "src/assets/svg/SvgStatistic.js",
+      "sha1": "aab3b70d3a9792711289e20c79f6095f46f52001"
+    },
+    {
+      "path": "src/assets/svg/SvgTask.js",
+      "sha1": "fc95c38a1f7cff1681ad77d24848f7437626067d"
+    },
+    {
+      "path": "src/assets/svg/SvgTaskStar.js",
+      "sha1": "1ce81b8a03c8258f6280f882456fdfdd8e506c2f"
+    },
+    {
+      "path": "src/assets/svg/SvgUser.js",
+      "sha1": "4b96da53cfb4d7298378a2407d4f0b59c8171e8e"
+    }
+  ]
+}

@@ -14,6 +14,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-project-projectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-project-projectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		991302796F6D4A2D96593BC5 /* Size.js in Resources */ = {isa = PBXBuildFile; fileRef = 9E5B35DE251C43EE94337626 /* Size.js */; };
+		2034A83E6C044C20A7C46CF2 /* SvgAcountMe.js in Resources */ = {isa = PBXBuildFile; fileRef = FAFD589226A442DB9C1EDDB0 /* SvgAcountMe.js */; };
+		09C42D83B34C4B80B032388B /* SvgHome.js in Resources */ = {isa = PBXBuildFile; fileRef = 111832D82B964DC1AC8A879A /* SvgHome.js */; };
+		DD50B7AAB55746258BA1DB55 /* SvgIce.js in Resources */ = {isa = PBXBuildFile; fileRef = A64AE433F3414037B6D887C6 /* SvgIce.js */; };
+		74642CAB36CE4882819E6BAC /* SvgNotification.js in Resources */ = {isa = PBXBuildFile; fileRef = F13CB08F429F454D84D02E27 /* SvgNotification.js */; };
+		A3B5832945F047A78978CAB8 /* SvgPassword.js in Resources */ = {isa = PBXBuildFile; fileRef = B307734EBD8E4A2DBFF84835 /* SvgPassword.js */; };
+		0C76216AC23544B29BF9E68D /* SvgPlus.js in Resources */ = {isa = PBXBuildFile; fileRef = 021912FB50A5402E8606C5C1 /* SvgPlus.js */; };
+		6CC0F396C5314DBFAC83D23A /* SvgStar.js in Resources */ = {isa = PBXBuildFile; fileRef = 5D21D323362B439281E792E4 /* SvgStar.js */; };
+		6660CC5B76974B5984741F90 /* SvgStatistic.js in Resources */ = {isa = PBXBuildFile; fileRef = A85B18A2C10C4724968EF2C3 /* SvgStatistic.js */; };
+		46338C88328844A98627842A /* SvgTask.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F82869F78884711827D255E /* SvgTask.js */; };
+		535381F74A0B4341B3ECF08E /* SvgTaskStar.js in Resources */ = {isa = PBXBuildFile; fileRef = 7ED32641D71C4AC2856FC7D3 /* SvgTaskStar.js */; };
+		8844CED607B7499BA07B5F4D /* SvgUser.js in Resources */ = {isa = PBXBuildFile; fileRef = 011375D3B1CB454FB88768A5 /* SvgUser.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,18 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = project/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-project-projectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project-projectTests.release.xcconfig"; path = "Target Support Files/Pods-project-projectTests/Pods-project-projectTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9E5B35DE251C43EE94337626 /* Size.js */ = {isa = PBXFileReference; name = "Size.js"; path = "../src/assets/Size.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FAFD589226A442DB9C1EDDB0 /* SvgAcountMe.js */ = {isa = PBXFileReference; name = "SvgAcountMe.js"; path = "../src/assets/svg/SvgAcountMe.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		111832D82B964DC1AC8A879A /* SvgHome.js */ = {isa = PBXFileReference; name = "SvgHome.js"; path = "../src/assets/svg/SvgHome.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A64AE433F3414037B6D887C6 /* SvgIce.js */ = {isa = PBXFileReference; name = "SvgIce.js"; path = "../src/assets/svg/SvgIce.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F13CB08F429F454D84D02E27 /* SvgNotification.js */ = {isa = PBXFileReference; name = "SvgNotification.js"; path = "../src/assets/svg/SvgNotification.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B307734EBD8E4A2DBFF84835 /* SvgPassword.js */ = {isa = PBXFileReference; name = "SvgPassword.js"; path = "../src/assets/svg/SvgPassword.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		021912FB50A5402E8606C5C1 /* SvgPlus.js */ = {isa = PBXFileReference; name = "SvgPlus.js"; path = "../src/assets/svg/SvgPlus.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5D21D323362B439281E792E4 /* SvgStar.js */ = {isa = PBXFileReference; name = "SvgStar.js"; path = "../src/assets/svg/SvgStar.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A85B18A2C10C4724968EF2C3 /* SvgStatistic.js */ = {isa = PBXFileReference; name = "SvgStatistic.js"; path = "../src/assets/svg/SvgStatistic.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F82869F78884711827D255E /* SvgTask.js */ = {isa = PBXFileReference; name = "SvgTask.js"; path = "../src/assets/svg/SvgTask.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7ED32641D71C4AC2856FC7D3 /* SvgTaskStar.js */ = {isa = PBXFileReference; name = "SvgTaskStar.js"; path = "../src/assets/svg/SvgTaskStar.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		011375D3B1CB454FB88768A5 /* SvgUser.js */ = {isa = PBXFileReference; name = "SvgUser.js"; path = "../src/assets/svg/SvgUser.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +146,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2265191228E14260B7C8F532 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +172,26 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		2265191228E14260B7C8F532 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				9E5B35DE251C43EE94337626 /* Size.js */,
+				FAFD589226A442DB9C1EDDB0 /* SvgAcountMe.js */,
+				111832D82B964DC1AC8A879A /* SvgHome.js */,
+				A64AE433F3414037B6D887C6 /* SvgIce.js */,
+				F13CB08F429F454D84D02E27 /* SvgNotification.js */,
+				B307734EBD8E4A2DBFF84835 /* SvgPassword.js */,
+				021912FB50A5402E8606C5C1 /* SvgPlus.js */,
+				5D21D323362B439281E792E4 /* SvgStar.js */,
+				A85B18A2C10C4724968EF2C3 /* SvgStatistic.js */,
+				8F82869F78884711827D255E /* SvgTask.js */,
+				7ED32641D71C4AC2856FC7D3 /* SvgTaskStar.js */,
+				011375D3B1CB454FB88768A5 /* SvgUser.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +289,18 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				991302796F6D4A2D96593BC5 /* Size.js in Resources */,
+				2034A83E6C044C20A7C46CF2 /* SvgAcountMe.js in Resources */,
+				09C42D83B34C4B80B032388B /* SvgHome.js in Resources */,
+				DD50B7AAB55746258BA1DB55 /* SvgIce.js in Resources */,
+				74642CAB36CE4882819E6BAC /* SvgNotification.js in Resources */,
+				A3B5832945F047A78978CAB8 /* SvgPassword.js in Resources */,
+				0C76216AC23544B29BF9E68D /* SvgPlus.js in Resources */,
+				6CC0F396C5314DBFAC83D23A /* SvgStar.js in Resources */,
+				6660CC5B76974B5984741F90 /* SvgStatistic.js in Resources */,
+				46338C88328844A98627842A /* SvgTask.js in Resources */,
+				535381F74A0B4341B3ECF08E /* SvgTaskStar.js in Resources */,
+				8844CED607B7499BA07B5F4D /* SvgUser.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
