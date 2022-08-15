@@ -5,16 +5,7 @@ import SvgX from "../../assets/svg/SvgX";
 import size from "../../assets/Size";
 
 function DurationModal({ showDuration,setDuration,setShowDuration,duration }) {
-  console.log(duration);
-const arr=[
-  {title:'15 minute',id:1},
-  {title:'30 minute',id:2},
-  {title:'2 hours',id:3},
-  {title:'1 hours',id:4},
-  {title:'3 hours',id:5},
-  {title:'Half day',id:6},
-  {title:'Full day',id:7},
-]
+
   return (
     <Modal
       visible={showDuration}

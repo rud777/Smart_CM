@@ -1,28 +1,23 @@
-import React, { useState } from "react";
-import { Modal, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
 import Size from "../../assets/Size";
+import { Modal, Text, TouchableOpacity, View } from "react-native";
 import SvgX from "../../assets/svg/SvgX";
-import CheckBox from "@react-native-community/checkbox";
 import Check from "../ChackBox/Check";
 
-
-function ProjectModal({ show, setData, setShow, data }) {
-  const key='Projects'
-  const aray = [
-    { title: "Project name 01",id:1 },
-    { title: "Project name 02",id:2 },
-    { title: "Project name 03",id:3 },
-    { title: "Project name 04",id:4 },
-  ];
-
+function RoomModal({ showRoom,setShowRoom,setData,data }) {
+  const key='Room';
+  const arr=[
+    {title:'Meeting rooms',id:1},
+    {title:'Meeting room1',id:2},
+  ]
   return (
     <Modal
-      visible={show}
+      visible={showRoom}
       style={{ width: Size.size375, height: Size.size446 }}
     >
       <TouchableOpacity
         style={{ marginTop: Size.size23, justifyContent: "flex-end", flexDirection: "row", marginRight: Size.size23 }}
-        onPress={() => setShow(!show)}>
+        onPress={() => setShowRoom(!showRoom)}>
         <SvgX />
       </TouchableOpacity>
       <View style={{ width: Size.size375, alignItems: "center", marginTop: Size.size5 }}>
@@ -35,15 +30,15 @@ function ProjectModal({ show, setData, setShow, data }) {
           letterSpacing: 0.25,
           color: "#11493E",
         }}>
-          Select Project
+          Choose event type
         </Text>
       </View>
-      <View>
-        <Check props={aray} data={data} setData={setData} ki={key}/>
+      <View style={{height:Size.size460}}>
+        <Check props={arr}  data={data} setData={setData} ki={key}/>
       </View>
       <TouchableOpacity style={{width: Size.size335,
-        height:Size.size38,backgroundColor:'#11493E',borderRadius:Size.size4,alignItems:'center',justifyContent:'center',marginLeft:Size.size20,marginRight:Size.size23,marginTop:Size.size155}}
-                        onPress={()=>setShow(!show)}
+        height:Size.size38,backgroundColor:'#11493E',borderRadius:Size.size4,alignItems:'center',justifyContent:'center',marginLeft:Size.size20,marginRight:Size.size23}}
+                        onPress={()=>setShowRoom(!showRoom)}
       >
         <Text style={{
           fontFamily: 'Montserrat',
@@ -56,8 +51,9 @@ function ProjectModal({ show, setData, setShow, data }) {
         }}
         >Select</Text>
       </TouchableOpacity>
+
     </Modal>
   );
 }
 
-export default ProjectModal;
+export default RoomModal;

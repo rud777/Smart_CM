@@ -3,6 +3,7 @@ import Size from "../../assets/Size";
 import { Modal, Text, TouchableOpacity, View } from "react-native";
 import SvgX from "../../assets/svg/SvgX";
 import CalendarDate from "../CalendarDate";
+import CalendarDate2 from "../CalendarDate2";
 
 function DateModal({ showDate, setShowDate,date,setDate }) {
   return (
@@ -27,7 +28,7 @@ function DateModal({ showDate, setShowDate,date,setDate }) {
         }}>
           Select Day
         </Text>
-        <CalendarDate date={date} setDate={setDate} />
+        <CalendarDate2 date={date} setDate={setDate} />
         <TouchableOpacity style={{width: Size.size335,
           height:Size.size38,backgroundColor:'#11493E',borderRadius:Size.size4,alignItems:'center',justifyContent:'center',marginLeft:Size.size20,marginRight:Size.size23,marginTop:Size.size155}}
                           onPress={()=>setShowDate(!showDate)}

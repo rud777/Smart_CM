@@ -6,7 +6,6 @@ import Login from "../screen/login/Login";
 import Forgotpassword from "../screen/login/forgotpassword";
 import TabNavigation from "../navigate/TabNavigation";
 import Navigate from '../navigate/TabNavigation'
-import NavigateCreate from "../navigate/navigateCreate";
 import { useSelector } from "react-redux";
 const Stack = createNativeStackNavigator();
 

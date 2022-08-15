@@ -13,17 +13,19 @@ import SvgMe from "../assets/svg/SvgAcountMe";
 import SvgPlus from "../assets/svg/SvgPlus";
 import SvgTask from "../assets/svg/SvgTask";
 import Bar from "../components/TabBar";
-import { Image, ImageBackground, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, Keyboard, TouchableOpacity, View } from "react-native";
 import BgPlus from "../images/Polygon.png";
 import BgPlusW from "../images/Polygon1.png";
 import Air from "../images/air.png";
 import size from "../assets/Size";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import SvgTaskStar from "../assets/svg/SvgTaskStar";
 import SvgStar from "../assets/svg/SvgStar";
 import SvgAir from "../assets/svg/SvgAir";
-import NavigateCreate from "./navigateCreate";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CreateTask from "../screen/createTask/createTask";
+import CreateEvent from "../screen/createEvent/createEvent";
+import CreateBook from "../screen/createBook/createBook";
 
 
 const Tab = createBottomTabNavigator();
@@ -31,21 +33,35 @@ const Stack = createNativeStackNavigator();
 export default function TabNavigation() {
   const [active, setActive] = useState(true);
   const navigate = useNavigation();
-  const handlerTask = () => {
-    navigate.navigate('createtask')
-  }
-  const hendlerEvents = () => {
-    navigate.navigate('createevent')
-  }
+  const [showTab, setShowTab] = useState(true);
+  useEffect(() => {
+    const DidShow = Keyboard.addListener("keyboardDidShow", _keyboardDidShow);
+    const DidHide = Keyboard.addListener("keyboardDidHide", _keyboardDidHide);
+
+    return () => {
+      DidShow.remove()
+      DidHide.remove()
+    };
+  }, []);
+
+  const _keyboardDidShow = (e) => {
+    setShowTab(false);
+  };
+
+  const _keyboardDidHide = () => {
+    setShowTab(true);
+  };
+
+
   return (
     <>
-
       <Tab.Navigator
-        tabBar={(props) => <Bar {...props} />}>
+        tabBar={(props) => <Bar {...props} showTab={showTab}/>} >
         <Tab.Screen name="Home" component={Home} options={{
           tabBarIcon: <SvgHome />,
           headerShown: false,
-        }} />
+        }}
+        />
         <Tab.Screen name="notification" component={Notification}
                     options={{
                       tabBarIcon: <SvgNotif />, headerShown: false,
@@ -61,51 +77,16 @@ export default function TabNavigation() {
                       tabBarIcon: <SvgMe />, headerShown: false,
                     }}
         />
-        <Tab.Screen name={'navigateTask'} component={NavigateCreate}
-                    options={{
-                       headerShown: false,
-                    }}
-        />
+         <Tab.Screen name={"createtask"} component={CreateTask}  options={{
+          headerShown: false,
+        }} />
+        <Tab.Screen name={"createevent"} component={CreateEvent}  options={{
+          headerShown: false,
+        }} />
+        <Tab.Screen name={"createbook"} component={CreateBook}  options={{
+          headerShown: false,
+        }} />
       </Tab.Navigator>
-      <TouchableOpacity style={{ position: "absolute", bottom: size.size35, left: size.size140 }}
-                        onPress={() => setActive(!active)}>
-        {active ? <ImageBackground source={BgPlus} style={{
-            width: size.size97,
-            height: size.size80,
-            justifyContent: "center",
-            alignItems: "center",
-            paddingBottom: 40,
-          }}>
-            <SvgPlus />
-          </ImageBackground> :
-          <>
-            <View style={{flexDirection:"row",marginLeft:-20,position:'relative'}}>
-            <TouchableOpacity style={{ width: size.size45, height: size.size45, backgroundColor: "#347474",borderRadius:size.size50,justifyContent:'center',alignItems:'center' }} onPress={handlerTask}>
-              <SvgTask />
-            </TouchableOpacity>
-            <TouchableOpacity style={{ width: size.size45, height: size.size45, backgroundColor: "#347474",borderRadius:size.size50,justifyContent:'center',alignItems:'center' ,position:'relative',bottom:20}} onPress={hendlerEvents}>
-              <SvgTaskStar />
-              <View style={{position:'absolute',right:size.size12,bottom:size.size12}}>
-                <SvgStar/>
-              </View>
-            </TouchableOpacity>
-            <View style={{ width: size.size45, height: size.size45, backgroundColor: "#347474",borderRadius:size.size50,justifyContent:'center',alignItems:'center' }}>
-              <SvgAir/>
-            </View>
-            </View>
-
-            <ImageBackground source={BgPlusW} style={{
-              width: size.size97,
-              height: size.size80,
-              justifyContent: "center",
-              alignItems: "center",
-              paddingBottom: 40,
-            }}>
-              <SvgPlus iconColor={"#347474"} />
-            </ImageBackground>
-          </>
-        }
-      </TouchableOpacity>
     </>
   );
 }

@@ -8,7 +8,8 @@ import {
 } from "../actions/index";
 
 const initialState = {
-
+  formData:{},
+  auth_key:''
 }
 
 export default function reducer(state = initialState, action) {

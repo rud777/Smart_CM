@@ -10,6 +10,7 @@ import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { listEventRequest } from "../../store/actions";
 import Events from "./Events";
+import Taskes from "./Taskes";
 
 
 function Home(props) {
@@ -18,7 +19,7 @@ function Home(props) {
   const [active1, setActive1] = useState(true);
   const [active2, setActive2] = useState(true);
   const [svg, setSvg] = useState(true);
-  const [toggleCheckBox, setToggleCheckBox] = useState(false)
+
   const { employee_information } = useSelector(state => state.formData);
   const  auth_key=useSelector(state=>state.auth_key)
   const handlerButten = () => {
@@ -76,22 +77,10 @@ function Home(props) {
           <SvgCalendar iconColor={svg ? "#347474" : "#FCFCFC"} />
         </TouchableOpacity>
       </View>
-      {active? null:<View style={Style.taskesView}>
-        <CheckBox
-          disabled={false}
-          value={toggleCheckBox}
-          onValueChange={(newValue) => setToggleCheckBox(newValue)}
-        />
-        <View style={Style.ViewTitle}>
-          <Text style={Style.createTask}>Create Task</Text>
-          <Text style={Style.createTaskDate}>May 27,2022 | 15 minute</Text>
-        </View>
-        <View style={Style.viewProject}>
-          <Text style={Style.textProject}>Bob AI</Text>
-        </View>
-      </View>}
+      {active? null:<Taskes props={svg}/>}
 
       {active1?null:
+
         <Events props={svg}/>
         }
     </View>
@@ -99,3 +88,4 @@ function Home(props) {
 }
 
 export default Home;
+

@@ -7,7 +7,6 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    position:'relative'
   },
   body: {
     backgroundColor: "#F5F5F5",
@@ -42,7 +41,7 @@ const style = StyleSheet.create({
     borderStyle: "solid",
     borderBottomWidth: size.size1,
     paddingLeft: Size.size10,
-    marginTop: Size.size5,
+    marginTop: Size.size13,
     position: "relative",
   },
   createButten: {
@@ -52,7 +51,7 @@ const style = StyleSheet.create({
     borderRadius: Size.size4,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: Size.size40,
+    marginTop: Size.size70,
   },
   createText: {
     fontFamily: "Montserrat",
@@ -74,7 +73,6 @@ const style = StyleSheet.create({
     borderStyle:'solid',
     borderColor:'#E3E3E3',
     margin:Size.size12,
-    marginTop:Size.size26,
     textAlignVertical: 'top',
 },
   text: {

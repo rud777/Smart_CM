@@ -37,7 +37,6 @@ export const fetchPollsList = createLogic({
         'auth_key': `${token}`
       }})
       .then((polls) => {
-        console.log(polls.data,333333);
         dispatch({ type:LIST_EVENT_SUCCESS, payload: polls.data.data })
       })
       .catch((err) => {
