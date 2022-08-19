@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { FlatList, ScrollView, Text, View } from "react-native";
-import { useSelector } from "react-redux";
-import Style from "./style";
+import React from "react";
+import Events from "./Events";
+import Taskes from "./Taskes";
+import { FlatList, Text, View } from "react-native";
 import Size from "../../assets/Size";
 import CalendarDate from "../../components/CalendarDate";
+import Style from "./style";
 
-function Events({ props }) {
+function All(props) {
   const eventList = [
     {title:'Meeting with team',
       id:1,
@@ -52,10 +53,10 @@ function Events({ props }) {
       </View>
       <View>
         <View style={{marginLeft:Size.size6}}>
-        <Text style={Style.titleEvenet}>{item.title}</Text>
+          <Text style={Style.titleEvenet}>{item.title}</Text>
         </View>
         <View style={{marginLeft:Size.size6,marginTop:Size.size12}}>
-        <Text style={Style.descEvent}>{item.description}</Text>
+          <Text style={Style.descEvent}>{item.description}</Text>
         </View>
         <View style={{marginLeft:Size.size6,marginTop:Size.size12,justifyContent:'space-between', flexDirection:'row',width:Size.size305}}>
           <Text style={Style.createDateEvent}>{item.create_date}</Text>
@@ -66,11 +67,9 @@ function Events({ props }) {
   );
   return (
     <>
-      <FlatList data={eventList} renderItem={renderItem} keyExtractor={item => item.id}  ListHeaderComponent={props?null:<View style={{width:Size.size316,marginTop:Size.size31}}>
-        <CalendarDate />
-      </View>}/>
+      <FlatList data={eventList} renderItem={renderItem} keyExtractor={item => item.id}  ListHeaderComponent={<Taskes {...props}/>}/>
     </>
   );
 }
 
-export default Events;
+export default All;

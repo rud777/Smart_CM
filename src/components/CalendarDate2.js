@@ -17,7 +17,7 @@ function CalendarDate2({ date, setDate,setDayCalendar,dayCalendar }) {
         onDayPress={day => {
           setDate(day.dateString);
           setDay(day.dateString);
-          setDayCalendar(day.day)
+         setDayCalendar&&(setDayCalendar(day.day))
         }}
       />
     </>

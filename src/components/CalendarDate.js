@@ -45,7 +45,7 @@ function CalendarDate({ date, setDate }) {
         startDay={startDay} setStartDay={setStartDay}
         endDay={endDay} setEndDay={setEndDay}
         selectDays={selectDays} setSelectDays={setSelectDays}
-        calendar={calendar} />
+        calendar={calendar} keyExtractor={item => item.index}/>
       <Calendar
         hideDayNames = { true }
         markingType={"period"}

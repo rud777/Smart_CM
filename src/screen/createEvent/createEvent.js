@@ -31,15 +31,16 @@ function CreateEvent(props) {
   const [showDate, setShowDate] = useState(false);
   const [data, setData] = useState({});
   const [showDuration, setShowDuration] = useState(false);
-  const [greate,setGreate]=useState(false)
+  const [gte,setGte]=useState(false)
   const [date, setDate] = useState();
   const [duration, setDuration] = useState();
 
-if (greate){
+if (gte){
   props.navigation.setOptions({
     tabBarStyle: { display: "none" },
   })
-}else {
+}
+if (!gte){
   props.navigation.setOptions({
     tabBarStyle: { display: "flex" },
   })
@@ -112,18 +113,18 @@ if (greate){
           </TouchableOpacity>
           <View style={{width:Size.size319, height:Size.size1,backgroundColor:'#E3E3E3',marginTop:Size.size8}} onPress={() => setShowDuration(!showDuration)}>
           </View>
-          <TouchableOpacity style={{flexDirection:"row",width:Size.size295,height:Size.size25,marginTop:Size.size15}}>
+          <TouchableOpacity style={{flexDirection:"row",width:Size.size295,height:Size.size25,marginTop:Size.size15}} onPress={() => setShowDuration(!showDuration)}>
             <Text style={Style.text}>{duration||'Duration'}</Text>
             <View style={{position:'absolute',top:Size.size5,right:Size.size10}}>
               <SvgDown />
             </View>
           </TouchableOpacity >
-          <View style={{width:Size.size319, height:Size.size1,backgroundColor:'#E3E3E3',marginTop:Size.size8}} onPress={() => setShowDuration(!showDuration)}>
+          <View style={{width:Size.size319, height:Size.size1,backgroundColor:'#E3E3E3',marginTop:Size.size8}} >
           </View>
           <Input multiline style={Style.area} numberOfLines = {4} placeholder='Description' {...props}/>
         </View>
         <TouchableOpacity style={Style.createButten} onPress={()=>{
-          setGreate(!greate)
+          setGte(!gte)
         }}>
           <Text style={Style.createText}>Create</Text>
         </TouchableOpacity>
@@ -136,7 +137,7 @@ if (greate){
                                      setData={setData} /> : null}
       {showDate?<DateModal showDate={showDate} setShowDate={setShowDate} data={date} setDate={setDate} />:null}
       {showDuration?<DurationModal setShowDuration={setShowDuration} showDuration={showDuration} duration={duration} setDuration={setDuration}/>:null}
-      {greate?<GreateModalEvents greate={greate} setGreate={setGreate}/>:null}
+      {gte?<GreateModalEvents gte={gte} setGte={setGte}/>:null}
     </KeyboardAvoidingView>
   );
 }

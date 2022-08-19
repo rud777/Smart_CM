@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { listEventRequest } from "../../store/actions";
 import Events from "./Events";
 import Taskes from "./Taskes";
+import All from "./All";
+import UpdateTaskes from "../updateTaskes/UpdateTaskes";
 
 
 function Home(props) {
@@ -19,6 +21,7 @@ function Home(props) {
   const [active1, setActive1] = useState(true);
   const [active2, setActive2] = useState(true);
   const [svg, setSvg] = useState(true);
+
 
   const { employee_information } = useSelector(state => state.formData);
   const  auth_key=useSelector(state=>state.auth_key)
@@ -77,12 +80,9 @@ function Home(props) {
           <SvgCalendar iconColor={svg ? "#347474" : "#FCFCFC"} />
         </TouchableOpacity>
       </View>
-      {active? null:<Taskes props={svg}/>}
-
-      {active1?null:
-
-        <Events props={svg}/>
-        }
+      {active? null:<Taskes svg={svg} {...props} />}
+      {active1?null: <Events props={svg}/>}
+      {active2?null: <All props={svg}/>}
     </View>
   );
 }

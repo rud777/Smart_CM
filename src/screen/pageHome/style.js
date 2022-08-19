@@ -93,6 +93,7 @@ const Style = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#EDF3F4",
+    marginTop:Size.size10
   },
   ViewTitle: {
     marginRight: Size.size80,

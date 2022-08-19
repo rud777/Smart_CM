@@ -13,15 +13,10 @@ import CalendarDate from "../CalendarDate";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import GreateModal from "./GreateModal";
 
-function VacationModal({ setShowLeave,showLeave,show,setShow,greate,setGreate },props) {
+function VacationModal({ setShowLeave,showLeave,show,setShow,greate,setGreate ,a,setA},props) {
   const sheetRef = useRef(null);
   const [open, setOpen] = useState(true);
-  const [date, setDate] = useState(new Date());
-  const [openTime, setOpenTime] = useState(false);
-  const key = "Type";
   const snapPoints = useMemo(() => ['70%','80%','100%'], [])
-  const mouns= moment().format('MMM');
-  const time = moment(date).format("hh:mm");
   return (
     <GestureHandlerRootView style={{height:'100%',position:'absolute',width:'100%'}}>
       <View style={{flex: 1, padding: 24,backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
@@ -73,6 +68,7 @@ function VacationModal({ setShowLeave,showLeave,show,setShow,greate,setGreate },
                          onPress={() => {
                            setShow(!show)
                            setGreate(!greate)
+                           setA(!a)
                          }}
        >
          <Text style={{

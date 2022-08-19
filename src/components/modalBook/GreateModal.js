@@ -9,7 +9,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import SvgGreate from "../../assets/svg/SvgGreate";
 import SvgX from "../../assets/svg/SvgX";
 
-function GreateModal({ greate,setGreate }) {
+function GreateModal({ greate,setGreate,setSelect,setShow ,a,setA,vacation,setVacation}) {
   const snapPoints = useMemo(() => ["45%", "80%", "100%"], []);
   const sheetRef = useRef(null);
   const handleSheetChanges = useCallback((index: number) => {
@@ -26,7 +26,13 @@ function GreateModal({ greate,setGreate }) {
         >
           <TouchableOpacity
             style={{ marginTop: Size.size23, justifyContent: "flex-end", flexDirection: "row", marginRight: Size.size23 }}
-            onPress={() => setGreate(!greate)}>
+            onPress={() => {
+              setGreate(!greate)
+              setSelect(false)
+              setShow(false)
+              setA(false)
+              setVacation(false)
+            }}>
             <SvgX />
           </TouchableOpacity>
           <View style={{alignItems:'center',marginTop:Size.size17}}>

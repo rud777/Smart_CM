@@ -15,7 +15,7 @@ import SvgAir from "../assets/svg/SvgAir";
 import BgPlusW from "../images/Polygon1.png";
 
 
-function TabBar({ state, descriptors, navigation, showTab }) {
+function TabBar({ state, descriptors, navigation }) {
   const [active, setActive] = useState(true);
 
   const handlerTask = () => {
@@ -110,7 +110,7 @@ function TabBar({ state, descriptors, navigation, showTab }) {
             const { options } = descriptors[route.key];
             const isFocused = state.index === index;
             const onPress = () => {
-              setActive(true)
+              setActive(true);
               const event = navigation.emit({
                 type: "tabPress",
                 target: route.key,
@@ -141,30 +141,28 @@ function TabBar({ state, descriptors, navigation, showTab }) {
               return null;
             }
             return (
-              <>
 
-                <TouchableOpacity
-                  accessibilityRole="button"
-                  accessibilityState={isFocused ? { selected: true } : {}}
-                  accessibilityLabel={options.tabBarAccessibilityLabel}
-                  testID={options.tabBarTestID}
-                  onPress={onPress}
-                  onLongPress={onLongPress}
-                  style={{ flex: 1, alignItems: "center", zIndex: 1, marginTop: -60 }}
-                  key={route.key}
-                >
-                  <View style={isFocused ? {
-                    width: size.size44,
-                    height: size.size44,
-                    backgroundColor: "#FFFFFF",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: size.size50,
-                  } : { width: size.size44, height: size.size44, alignItems: "center", justifyContent: "center" }}>
-                    {Svg[route.name]}
-                  </View>
-                </TouchableOpacity>
-              </>
+              <TouchableOpacity
+                accessibilityRole="button"
+                accessibilityState={isFocused ? { selected: true } : {}}
+                accessibilityLabel={options.tabBarAccessibilityLabel}
+                testID={options.tabBarTestID}
+                onPress={onPress}
+                onLongPress={onLongPress}
+                style={{ flex: 1, alignItems: "center", zIndex: 1, marginTop: -60 }}
+                key={route.key}
+              >
+                <View style={isFocused ? {
+                  width: size.size44,
+                  height: size.size44,
+                  backgroundColor: "#FFFFFF",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: size.size50,
+                } : { width: size.size44, height: size.size44, alignItems: "center", justifyContent: "center" }}>
+                  {Svg[route.name]}
+                </View>
+              </TouchableOpacity>
             );
           })}
         </View>

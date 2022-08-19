@@ -4,7 +4,7 @@ import CheckBox from "@react-native-community/checkbox";
 import Size from '../../assets/Size'
 import ChackBoxP from "./ChackBoxP";
 
-function Check({props,data,setData,ki,setHourly,vacation,setVacation}) {
+function Check({props,data,setData,ki,setHourly,vacation,setVacation,setShow}) {
   const [toggleCheckBox, setToggleCheckBox] = useState()
   const changeValue=(item,kay,value)=>{
     if (item.item.title==='Hourly leave'){
@@ -12,6 +12,7 @@ function Check({props,data,setData,ki,setHourly,vacation,setVacation}) {
     }
     if(item.item.title==='Vacation'){
       setVacation(true)
+      setShow(true)
     }
     setToggleCheckBox(item.index)
     setData({ ...data, [kay]: value })

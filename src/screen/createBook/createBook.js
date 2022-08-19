@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Style from "../createEvent/style";
 import Size from "../../assets/Size";
@@ -23,22 +23,18 @@ function CreateBook(props) {
   const [show,setShow]=useState(false)
   const [select,setSelect]=useState(false)
   const [greate,setGreate]=useState(false)
-  if(!showLeave){
-    props.navigation.setOptions({
-      tabBarStyle: { display: "flex" },
-    })
-  }
-  if (show){
-    props.navigation.setOptions({
-      tabBarStyle: { display: "none" },
-    })
-  }
-  if (greate){
-    props.navigation.setOptions({
-      tabBarStyle: { display: "none" },
-    })
-  }
+  const [a,setA]=useState(false)
 
+   if(!showLeave){
+     props.navigation.setOptions({
+       tabBarStyle: { display: "flex" },
+     })
+   }
+   if (select||show||greate){
+     props.navigation.setOptions({
+       tabBarStyle: { display: "none" },
+     })
+   }
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -57,8 +53,6 @@ function CreateBook(props) {
             <TouchableOpacity style={{flexDirection:"row",width:Size.size295,height:Size.size25,marginTop:Size.size15}} onPress={()=>{
               setShowLeave(!showLeave)
               setHourly(false)
-              setVacation(false)
-              setShow(false)
               props.navigation.setOptions({
                 tabBarStyle: { display: "none" },
               })
@@ -79,14 +73,13 @@ function CreateBook(props) {
           <TouchableOpacity style={Style.createButten} onPress={()=>{
             setSelect(!select)
             setShowLeave(!showLeave)
-            setGreate(!greate)
           }} >
             <Text style={Style.createText}>Create</Text>
           </TouchableOpacity>
       </ScrollView>
-      {showLeave?<BookLeaveModal show={show} setShow={setShow}  vacation={vacation} setVacation={setVacation} dayCalendar={dayCalendar} hourly={hourly} setHourly={setHourly} select={select} setSelect={setSelect} duration={duration} setDuration={setDuration} showLeave={showLeave} setShowLeave={setShowLeave} data={data} setData={setData}/>:null}
-      {show&&vacation?<VacationModal show={show} setShow={setShow}  showLeave={showLeave} setShowLeave={setShowLeave} greate={greate} setGreate={setGreate}/>:null}
-      {greate&&!showLeave?<GreateModal greate={greate} setGreate={setGreate}/>:null}
+      {showLeave?<BookLeaveModal   setGreate={setGreate} greate={greate} a={a} setA={setA} show={show} setShow={setShow}  vacation={vacation} setVacation={setVacation} dayCalendar={dayCalendar} hourly={hourly} setHourly={setHourly} select={select} setSelect={setSelect} duration={duration} setDuration={setDuration} showLeave={showLeave} setShowLeave={setShowLeave} data={data} setData={setData}/>:null}
+      {vacation&&a?<VacationModal a={a} setA={setA} show={show} setShow={setShow}  showLeave={showLeave} setShowLeave={setShowLeave} greate={greate} setGreate={setGreate}/>:null}
+      {greate&&!showLeave?<GreateModal greate={greate} setGreate={setGreate} select={select} setSelect={setSelect} show={show} setShow={setShow} a={a} setA={setA} vacation={vacation} setVacation={setVacation} />:null}
     </KeyboardAvoidingView>
   );
 }
