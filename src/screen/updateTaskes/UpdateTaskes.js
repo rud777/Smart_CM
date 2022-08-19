@@ -34,9 +34,6 @@ function UpdateTaskes(props) {
       {!show ? <View style={Style.body}>
           <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
             <TouchableOpacity style={Style.svgLeft} onPress={() => {
-              // setData({});
-              // setDuration();
-              // setDate();
               props.navigation.navigate("Home");
             }
             }>
@@ -56,7 +53,7 @@ function UpdateTaskes(props) {
             <TouchableOpacity
               style={{ flexDirection: "row", width: Size.size295, height: Size.size25, marginTop: Size.size35 }}
               onPress={() => setShow(!show)}>
-              <Text style={Style.text}>{data["Projects"] || datas.description}</Text>
+              <Text style={Style.text}>{data["Projects"] || datas.project}</Text>
               <View style={{ position: "absolute", top: Size.size5, right: Size.size10 }}>
                 <SvgDown />
               </View>

@@ -16,6 +16,87 @@ import UpdateTaskes from "../updateTaskes/UpdateTaskes";
 
 
 function Home(props) {
+  const eventList = [
+    {title:'Meeting with team',
+      id:1,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 30,2022 ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    },
+    {title:'Meeting with team',
+      id:2,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 19,2022 ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    },
+    {title:'Meeting with team',
+      id:3,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 24,2022 ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    },
+    {title:'Meeting with team',
+      id:4,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 28,2022  ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    },
+    {title:'Meeting with team',
+      id:5,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 09,2022 ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    },
+    {title:'Meeting with team',
+      id:6,
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      create_date:'May 05,2022 ',
+      time:'12:00 - 15:00',
+      room:'Meeting room 306',
+    }
+  ]
+  const taskList = [
+    {
+      id: 7,
+      title: "Create Task",
+      project: "Bob AI",
+      create_date: "May 27,2022 ",
+      create_duration:'15 minute'
+    },
+    {
+      id: 8,
+      title: "Research Dashboard",
+      project: "New City",
+      create_date: "May 19,2022",
+      create_duration:'15 minute'
+    },
+    {
+      id: 9,
+      title: "Feedbacks",
+      project: "Bob AI",
+      create_date: "May 03,2022",
+      create_duration:'15 minute'
+    },
+    {
+      id: 10,
+      title: "Sign up",
+      project: "Mapllo",
+      create_date: "May 30,2022 ",
+      create_duration:'15 minute'
+    },
+    {
+      id: 11,
+      title: "Contact",
+      project: "Broker ...",
+      create_date: "May 20,2022 ",
+      create_duration:'15 minute'
+    },
+  ];
   const dispach=useDispatch()
   const [active, setActive] = useState(false);
   const [active1, setActive1] = useState(true);
@@ -80,9 +161,9 @@ function Home(props) {
           <SvgCalendar iconColor={svg ? "#347474" : "#FCFCFC"} />
         </TouchableOpacity>
       </View>
-      {active? null:<Taskes svg={svg} {...props} />}
-      {active1?null: <Events props={svg}/>}
-      {active2?null: <All props={svg}/>}
+      {active? null:<Taskes svg={svg} {...props} taskList={taskList} />}
+      {active1?null: <Events props={svg} eventList={eventList}/>}
+      {active2?null: <All svg={svg} taskList={taskList} eventList={eventList}/>}
     </View>
   );
 }
